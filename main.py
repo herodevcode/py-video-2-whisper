@@ -3,6 +3,7 @@ from moviepy.editor import VideoFileClip
 import whisper
 import os
 import tempfile
+import imageio_ffmpeg as ffmpeg
 
 st.title("Video to Transcription")
 

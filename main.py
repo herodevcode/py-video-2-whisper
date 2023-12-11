@@ -1,9 +1,13 @@
 import streamlit as st
 from moviepy.editor import VideoFileClip
+from moviepy.config import change_settings
 import whisper
 import os
 import tempfile
 import imageio_ffmpeg as ffmpeg
+
+ffmpeg_path = ffmpeg.get_ffmpeg_exe()
+change_settings({"FFMPEG_BINARY": ffmpeg_path})
 
 st.title("Video to Transcription")
 
